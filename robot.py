@@ -1,17 +1,28 @@
 import wpilib
-from commandbased import CommandBasedRobot
 
 import subsystems
 import oi
 from commands.autonomous import AutonomousProgram
 
 
-class Robot(CommandBasedRobot): 
+class Robot(wpilib.IterativeRobot): 
+   
     def robotInit(self):
-        subsystems.init()
-        self.Drivetrain = subsytems.Drivetrain()
-        self.oi = oi
+        self.drivetrain = subsytems.Drivetrain()
+        self.oi = OI()
+        self.autonomousCommand = commands.Auto()
+        
     def autonomousInit(self):
-        self.autonomousProgram.start()
+        try:
+            self.autonomousProgram.start()
+        except NameError:
+            print("Autonomous command not set")
+        
+    def teleopInit(self):
+        try:
+            self.autonomousProgram.cancel()
+        except NameError:
+            print("Autonomous command not set")
+            
 if __name__ == '__main__':
     wpilib.run(Robot)
