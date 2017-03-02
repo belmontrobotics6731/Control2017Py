@@ -11,3 +11,5 @@ class drivetrain:
     self.motor1 = wpilib.Spark(robotMap.DRIVE1_PORT)
     self.motor2 = wpilib.Spark(robotMap.DRIVE2_PORT)
     self.motor3 = wpilib.Spark(robotMap.DRIVE3_PORT)
+    def initDefaultCommand(self):
+        self.setDefaultCommand(RobotDrive.drive(0,0))
