@@ -3,5 +3,7 @@ from wpilib.buttons.joystickbutton import JoystickButton
 
 import robotMap
 
-class wpilib.Joystick(LOGITECH_PORT)
-    
+class oi:
+    def __init__()
+        self.joystick = wpilib.Joystick(LOGITECH_PORT)
+        
