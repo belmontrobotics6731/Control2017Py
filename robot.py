@@ -10,7 +10,7 @@ class Robot(CommandBasedRobot):
     def robotInit(self):
         subsystems.init()
         self.Drivetrain = subsytems.Drivetrain()
-        oi.init()
+        self.oi = oi
     def autonomousInit(self):
         self.autonomousProgram.start()
 if __name__ == '__main__':
