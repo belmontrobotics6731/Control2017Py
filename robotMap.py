@@ -1,4 +1,4 @@
-class PortsList:
+class portsList:
     # left drive ports
     DRIVE0_PORT = 0
     DRIVE1_PORT = 1
