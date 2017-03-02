@@ -9,7 +9,7 @@ from commands.autonomous import AutonomousProgram
 class Robot(CommandBasedRobot): 
     def robotInit(self):
         subsystems.init()
-        self.driveTrain = subsytems.driveTrain()
+        self.Drivetrain = subsytems.Drivetrain()
         oi.init()
     def autonomousInit(self):
         self.autonomousProgram.start()
