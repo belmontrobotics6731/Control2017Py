@@ -2,7 +2,7 @@ import wpilib
 
 import subsystems
 import oi
-from commands.autonomous import AutonomousProgram
+#from commands.autonomous import AutonomousProgram
 
 
 class Robot(wpilib.IterativeRobot): 
